@@ -8,14 +8,19 @@
         tools:context=".CrearTablaActivity">
     <TextView
             android:id="@+id/fechaTrain"
-            android:text="FECHA"
+            android:text="@string/FECHA"
             android:layout_width="152dp"
             android:layout_height="71dp" tools:layout_editor_absoluteY="16dp"
             tools:layout_editor_absoluteX="16dp" tools:ignore="MissingConstraints"/>
     <TextView
             android:id="@+id/timeTrain"
-            android:text="TIME"
+            android:text="@string/TIME"
             android:layout_width="152dp"
             android:layout_height="71dp" tools:layout_editor_absoluteY="16dp"
             tools:layout_editor_absoluteX="243dp" tools:ignore="MissingConstraints"/>
+    <ImageButton
+            android:layout_width="112dp"
+            android:layout_height="109dp" app:srcCompat="@drawable/iconAdd" android:id="@+id/iconoAdd"
+            android:backgroundTint="#00FFFFFF" tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
