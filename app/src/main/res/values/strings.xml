@@ -54,4 +54,7 @@
     <string name="TIME">TIME</string>
     <string name="a_ade_una_tabla">añade una tabla</string>
     <string name="anade_una_tabla"/>
+    <string name="Tablas">Tablas disponibles</string>
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
 </resources>
