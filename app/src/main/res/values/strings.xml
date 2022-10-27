@@ -52,4 +52,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="FECHA">FECHA</string>
     <string name="TIME">TIME</string>
+    <string name="a_ade_una_tabla">añade una tabla</string>
+    <string name="anade_una_tabla"/>
 </resources>

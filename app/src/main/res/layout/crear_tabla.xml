@@ -20,7 +20,7 @@
             tools:layout_editor_absoluteX="243dp" tools:ignore="MissingConstraints"/>
     <ImageButton
             android:layout_width="112dp"
-            android:layout_height="109dp" app:srcCompat="@drawable/iconAdd" android:id="@+id/iconoAdd"
+            android:layout_height="109dp" app:srcCompat="@drawable/add" android:id="@+id/iconoAdd"
             android:backgroundTint="#00FFFFFF" tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
