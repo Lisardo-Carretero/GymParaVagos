@@ -1,20 +1,17 @@
 package com.example.gymparavagos
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Display
 import android.widget.CalendarView
-import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
-import com.google.android.material.card.MaterialCardView
-import com.google.android.material.datepicker.MaterialCalendar
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 
 class UserPage : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.userpage)
 
@@ -31,7 +28,7 @@ class UserPage : AppCompatActivity() {
                 // in which we are adding all the variables in it.
                 val date = (dayOfMonth.toString() + "-" + (month + 1) + "-" + year)
                 // set this date in TextView for Display
-                startActivity(Intent(this, CrearTablaActivity::class.java).putExtra("fecha", date))
+                startActivity(Intent(this, ElegirTablaActivity::class.java).putExtra("fecha", date))
             })
 
     }

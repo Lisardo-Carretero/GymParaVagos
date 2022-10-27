@@ -13,11 +13,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Material3.Dark"
             tools:targetApi="31">
+
         <activity
-                android:name=".ElegirTabla"
-                android:exported="false"/>
-        <activity
-                android:name=".CrearTablaActivity"
+                android:name=".ElegirTablaActivity"
                 android:exported="false"
                 android:label="@string/title_activity_crear_tabla"
                 android:theme="@style/Theme.Material3.Dark"/>

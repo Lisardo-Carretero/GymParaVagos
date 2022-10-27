@@ -5,22 +5,50 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".CrearTablaActivity">
+        tools:context=".ElegirTablaActivity">
+    <com.google.android.material.appbar.MaterialToolbar
+            app:menu="@menu/contextual_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize" android:id="@+id/toolbar" tools:ignore="MissingConstraints"/>
     <TextView
+            android:gravity="end"
+            android:id="@+id/timeTrain"
+            android:layout_marginEnd="60dp"
+            android:text="@string/TIME"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="19dp"/>
+    <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="60dp"
             android:id="@+id/fechaTrain"
             android:text="@string/FECHA"
-            android:layout_width="152dp"
-            android:layout_height="71dp" tools:layout_editor_absoluteY="16dp"
-            tools:layout_editor_absoluteX="16dp" tools:ignore="MissingConstraints"/>
-    <TextView
-            android:id="@+id/timeTrain"
-            android:text="@string/TIME"
-            android:layout_width="152dp"
-            android:layout_height="71dp" tools:layout_editor_absoluteY="16dp"
-            tools:layout_editor_absoluteX="243dp" tools:ignore="MissingConstraints"/>
-    <ImageButton
-            android:layout_width="112dp"
-            android:layout_height="109dp" app:srcCompat="@drawable/add" android:id="@+id/addTabla"
-            android:backgroundTint="#00FFFFFF" tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_width="wrap_content"
+            android:gravity="start"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" tools:layout_editor_absoluteY="19dp"/>
+    <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:layout_marginTop="64dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical"/>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            app:shapeAppearance="@style/Theme.Material3.Dark"
+            android:id="@+id/floating_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            app:borderWidth="2dp"
+            app:srcCompat="@drawable/ic_add_round" tools:ignore="MissingConstraints"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/culo"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
