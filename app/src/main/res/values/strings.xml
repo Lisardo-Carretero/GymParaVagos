@@ -3,7 +3,7 @@
     <string name="pantalla_login">pantalla_login</string>
     <string name="nombreCaja">nombreCaja</string>
     <string name="password">password</string>
-    <string name="empezar">empezar</string>
+    <string name="EMPEZAR">EMPEZAR</string>
     <string name="Usuario">Usuario</string>
     <string name="Password">Password</string>
     <string name="Gym">Gym para VAGOS</string>
@@ -61,4 +61,6 @@
     <string name="guardar">guardar</string>
     <string name="no_hay_niguna_tabla_seleccionada">No hay niguna tabla seleccionada</string>
     <string name="culo">culo</string>
+    <string name="nombredelavista">NOMBRE DE LA VISTA</string>
+    <string name="Elegir_Tabla">Elegir Tabla</string>
 </resources>

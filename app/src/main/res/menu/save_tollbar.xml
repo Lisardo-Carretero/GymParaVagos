@@ -6,6 +6,7 @@
     <item
             android:id="@+id/guardarSeleccion"
             android:icon="@drawable/ic_save"
-            app:showAsAction="always" android:title="@string/guardar"/>
+            app:showAsAction="ifRoom" android:title="@string/guardar"
+           />
 
 </menu>

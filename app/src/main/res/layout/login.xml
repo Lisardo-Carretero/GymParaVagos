@@ -8,47 +8,49 @@
         android:layout_height="match_parent"
         tools:context=".LoginPage" tools:ignore="LabelFor">
     <TextView
+            android:layout_margin="24dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Gym"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:id="@+id/textView" android:layout_marginTop="72dp" android:textSize="24sp"
+            android:id="@+id/textView" android:textSize="24sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textStyle="bold"
             android:fontFamily="monospace"/>
-    <EditText
-            android:id="@+id/userLogin"
-            android:layout_height="48dp"
-            android:layout_width="364dp"
-            android:inputType="textPersonName"
-            android:hint="@string/Usuario"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="116dp" app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:importantForAutofill="no" style="@style/Widget.AppCompat.AutoCompleteTextView"
-    />
 
+    <EditText style="@style/Widget.AppCompat.AutoCompleteTextView"
+              android:id="@+id/userLogin"
+              app:layout_constraintTop_toBottomOf="@+id/textView"
+              android:layout_marginTop="140dp"
+              android:layout_marginEnd="24dp"
+              android:layout_marginStart="24dp"
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:inputType="textPersonName"
+              android:hint="@string/Usuario"/>
     <EditText
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
             android:id="@+id/userPass"
-            android:layout_height="48dp"
-            android:layout_width="364dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
             android:inputType="textPassword"
             android:hint="@string/Password"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/userLogin" app:layout_constraintVertical_bias="0.074"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/userLogin"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:importantForAutofill="no" style="@style/Widget.AppCompat.EditText"
-            tools:text="@tools:sample/cities"/>
+            style="@style/Widget.AppCompat.EditText"/>
     <Button
             android:id="@+id/botonLogin"
-            app:layout_constraintTop_toBottomOf="@+id/userPass"
-            android:text="@string/empezar"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:text="@string/EMPEZAR"
             android:layout_width="148dp"
             android:layout_height="68dp"
-            android:layout_marginTop="62dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userPass"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:fontFamily="sans-serif" android:typeface="serif" android:textSize="20sp" android:textStyle="bold"/>
+            android:fontFamily="sans-serif" android:typeface="serif" android:textSize="20sp" android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

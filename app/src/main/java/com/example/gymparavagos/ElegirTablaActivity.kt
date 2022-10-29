@@ -1,13 +1,11 @@
 package com.example.gymparavagos
 
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.*
-
+import android.view.ActionMode
 import android.widget.Toast
-
-
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 
 
 class ElegirTablaActivity : AppCompatActivity() {
@@ -16,10 +14,10 @@ class ElegirTablaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.elegir_tabla)
         Toast.makeText(applicationContext, "" + intent.extras?.getString("fecha"), Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
-        super.onCreateContextMenu(menu, v, menuInfo)
+       val actionBar: ActionBar = supportActionBar!!
+        actionBar.title = ""
+        actionBar.setDisplayShowHomeEnabled(true)
+        actionBar.setDisplayHomeAsUpEnabled(true)
     }
 }
 
