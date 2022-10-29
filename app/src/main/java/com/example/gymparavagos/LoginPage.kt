@@ -13,7 +13,7 @@ class LoginPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.setContentView(R.layout.login)
-
+        supportActionBar?.hide()
         val botonLog: Button = findViewById(R.id.botonLogin)
         botonLog.setOnClickListener { login() }
     }

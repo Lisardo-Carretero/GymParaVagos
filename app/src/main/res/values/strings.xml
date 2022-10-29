@@ -47,9 +47,6 @@
     </string>
     <string name="Nombre_del_notas">Nombre_del_notas</string>
     <string name="title_activity_prueba">prueba</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="FECHA">FECHA</string>
     <string name="TIME">TIME</string>
     <string name="a_ade_una_tabla">añade una tabla</string>
@@ -63,4 +60,5 @@
     <string name="culo">culo</string>
     <string name="nombredelavista">NOMBRE DE LA VISTA</string>
     <string name="Elegir_Tabla">Elegir Tabla</string>
+    <string name="desvincular">Desvincular</string>
 </resources>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <menu xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:app="http://schemas.android.com/apk/res-auto">
+      xmlns:app="http://schemas.android.com/apk/res-auto" app:liftOnScroll="true">
 
     <item
             android:id="@+id/guardarSeleccion"
             android:icon="@drawable/ic_save"
-            app:showAsAction="ifRoom" android:title="@string/guardar"
-           />
+            android:title="@string/guardar"
+            app:showAsAction="ifRoom"/>
 
 </menu>

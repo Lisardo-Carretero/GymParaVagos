@@ -7,24 +7,25 @@
                                                    android:theme="@style/Theme.GymParaVagos" >
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-
-            android:id="@+id/coordinatorLayout"
+            android:theme="@style/Theme.GymParaVagos"
+            android:id="@+id/login_coordinatorLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" tools:ignore="MissingConstraints">
 
         <com.google.android.material.appbar.AppBarLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" tools:ignore="MissingConstraints" android:id="@+id/appBarLayout">
 
-            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" tools:ignore="MissingConstraints"
+                android:id="@+id/appBarProfile">
+
+            <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/login_upBar"
                     android:elevation="4dp"
-                    android:id="@+id/topAppBar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:title="@string/Elegir_Tabla"
                     app:menu="@menu/profile_tollbar"
                     app:navigationIcon="@drawable/ic_back"
-                    style="@style/Widget.MaterialComponents.Toolbar.Primary"
             />
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -32,13 +33,12 @@
 
     <FrameLayout
             android:theme="@style/Theme.Material3.Dark"
-
-            android:elevation="6dp"
+            android:elevation="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/coordinatorLayout" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_coordinatorLayout" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
         <CalendarView

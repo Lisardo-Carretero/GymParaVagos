@@ -13,11 +13,12 @@ class ElegirTablaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.elegir_tabla)
-        Toast.makeText(applicationContext, "" + intent.extras?.getString("fecha"), Toast.LENGTH_SHORT).show()
-       val actionBar: ActionBar = supportActionBar!!
+        supportActionBar?.hide()
+       Toast.makeText(applicationContext, "" + intent.extras?.getString("fecha"), Toast.LENGTH_SHORT).show()
+        /*val actionBar: ActionBar = supportActionBar!!
         actionBar.title = ""
         actionBar.setDisplayShowHomeEnabled(true)
-        actionBar.setDisplayHomeAsUpEnabled(true)
+        actionBar.setDisplayHomeAsUpEnabled(true)*/
     }
 }
 
