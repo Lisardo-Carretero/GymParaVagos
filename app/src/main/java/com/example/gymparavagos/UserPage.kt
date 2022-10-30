@@ -16,7 +16,7 @@ class UserPage : AppCompatActivity() {
         setContentView(com.example.gymparavagos.R.layout.userpage)
 
         val appbar: androidx.appcompat.widget.Toolbar = findViewById(com.example.gymparavagos.R.id.login_upBar)
-
+        appbar.title = "a"
 
     }
 }

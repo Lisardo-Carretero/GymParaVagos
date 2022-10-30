@@ -25,7 +25,6 @@
                     android:layout_height="?attr/actionBarSize"
                     app:title="@string/Elegir_Tabla"
                     app:menu="@menu/profile_tollbar"
-                    app:navigationIcon="@drawable/ic_back"
             />
 
         </com.google.android.material.appbar.AppBarLayout>
