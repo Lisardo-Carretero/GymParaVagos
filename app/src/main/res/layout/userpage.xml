@@ -19,7 +19,7 @@
                 android:id="@+id/appBarProfile">
 
             <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/login_upBar"
+                    android:id="@+id/user_upBar"
                     android:elevation="4dp"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"

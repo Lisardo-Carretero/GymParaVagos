@@ -1,7 +1,9 @@
 package com.example.gymparavagos
 
+import android.app.Activity
 import android.content.ContentValues.TAG
 import android.content.Context
+import android.content.Intent
 import android.content.IntentSender
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -10,16 +12,17 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.auth.api.identity.SignInClient
+import com.google.android.gms.auth.api.signin.*
+import com.google.android.gms.tasks.Task
 import com.google.firebase.ktx.Firebase
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
 import java.util.zip.GZIPOutputStream
 
 
@@ -38,45 +41,49 @@ class LoginPage : AppCompatActivity() {
         val userName: EditText = findViewById(R.id.textEdit_user)
         val userPass: EditText = findViewById(R.id.textEdit_pass)
 
-        auth= FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN)
             .requestIdToken(getString(R.string.serverId)).requestEmail().build()
 
-        googleSignInClient = GoogleSignIn.getClient(this,gso)
-
-
-        oneTapClient = Identity.getSignInClient(this)
-        signInRequest = BeginSignInRequest.builder()
-            .setPasswordRequestOptions(
-                BeginSignInRequest.PasswordRequestOptions.builder()
-                    .setSupported(true)
-                    .build()
-            )
-            .setGoogleIdTokenRequestOptions(
-                BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
-                    .setSupported(true)
-                    // Your server's client ID, not your Android client ID.
-                    .setServerClientId(getString(R.string.serverId))
-                    // Only show accounts previously used to sign in.
-                    .setFilterByAuthorizedAccounts(true)
-                    .build()
-            )
-            // Automatically sign in when exactly one credential is retrieved.
-            .setAutoSelectEnabled(true)
-            .build()
-        oneTapClient.beginSignIn(signInRequest)
-            .addOnSuccessListener(this) { result ->
-                try {
-                    ActivityResultContracts.StartIntentSenderForResult()
-                } catch (e: IntentSender.SendIntentException) {
-                    Log.e(TAG, "Couldn't start One Tap UI: ${e.localizedMessage}")
-                }
-            }
-            .addOnFailureListener(this) { e ->
-                // No saved credentials found. Launch the One Tap sign-up flow, or
-                // do nothing and continue presenting the signed-out UI.
-                e.localizedMessage?.let { Log.d(TAG, it) }
-            }
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
+        findViewById<ImageButton>(R.id.bt_google).setOnClickListener {
+            signInGoogle()
+        }
     }
 
+    private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
+            handleResults(task)
+        }
+    }
+
+    private fun signInGoogle() {
+        val singInIntent = googleSignInClient.signInIntent
+        launcher.launch(singInIntent)
+    }
+
+    private fun handleResults(task: Task<GoogleSignInAccount>) {
+        if (task.isSuccessful) {
+            val account: GoogleSignInAccount = task.result
+            if (account != null)
+                updateUI(account)
+        } else
+            Toast.makeText(this, task.exception.toString(), Toast.LENGTH_SHORT).show()
+    }
+
+    private fun updateUI(account: GoogleSignInAccount) {
+        val credential = GoogleAuthProvider.getCredential(account.idToken, null)
+        auth.signInWithCredential(credential).addOnCompleteListener {
+            if (it.isSuccessful) {
+                val intent: Intent = Intent(this, UserPage::class.java)
+                intent.putExtra("naame", account.displayName)
+                startActivity(intent)
+            } else
+                Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
 }
+
