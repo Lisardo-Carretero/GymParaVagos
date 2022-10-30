@@ -1,4 +1,5 @@
 <resources>
+    <string name="prefs_file">com.example.gymparavagos.PREFERENCE_FILE_KEY</string>
     <string name="app_name">GymParaVagos</string>
     <string name="pantalla_login">pantalla_login</string>
     <string name="nombreCaja">nombreCaja</string>

@@ -3,14 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/LisardoCarretero/AppData/Local/Android/Sdk/platforms/android-32/android.jar!/res/layout/keyguard.xml" value="0.1828125" />
         <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable-anydpi/ic_add.xml" value="0.1695" />
         <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable-anydpi/ic_add_round.xml" value="0.206" />
         <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable-anydpi/ic_back.xml" value="0.206" />
+        <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable-anydpi/ic_login.xml" value="0.187" />
         <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable-anydpi/ic_save.xml" value="0.206" />
         <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable-anydpi/ic_user.xml" value="0.206" />
         <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2945" />
+        <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable/aa.xml" value="0.187" />
+        <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable/ic_google_circulas.xml" value="0.187" />
         <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2945" />
         <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable/profile.xml" value="0.2945" />
+        <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/drawable/rounded.xml" value="0.187" />
         <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/layout-v31/userpage.xml" value="0.25" />
         <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/layout/aaaa.xml" value="0.1984375" />
         <entry key="..\:/Users/LisardoCarretero/IdeaProjects/GymParaVagos/app/src/main/res/layout/activity_creat_tabla.xml" value="0.16822916666666668" />
