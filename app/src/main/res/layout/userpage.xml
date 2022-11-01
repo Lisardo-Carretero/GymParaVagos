@@ -4,31 +4,8 @@
                                                    xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
-                                                   android:theme="@style/Theme.GymParaVagos" >
+                                                   android:theme="@style/Theme.GymParaVagos">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-            android:theme="@style/Theme.GymParaVagos"
-            android:id="@+id/login_coordinatorLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" tools:ignore="MissingConstraints">
-
-        <com.google.android.material.appbar.AppBarLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" tools:ignore="MissingConstraints"
-                android:id="@+id/appBarProfile">
-
-            <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/user_upBar"
-                    android:elevation="4dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:title="@string/Elegir_Tabla"
-                    app:menu="@menu/profile_tollbar"
-            />
-
-        </com.google.android.material.appbar.AppBarLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <FrameLayout
             android:theme="@style/Theme.Material3.Dark"
@@ -37,8 +14,9 @@
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_coordinatorLayout" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/frameLayout">
 
         <CalendarView
                 android:layout_gravity="center"
@@ -48,6 +26,14 @@
                 tools:ignore="MissingConstraints"
         />
     </FrameLayout>
+    <Button
+            android:text="Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button2"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

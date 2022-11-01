@@ -1,24 +1,33 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Material3.Dark.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.Material3.Dark.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <!-- Base application theme. -->
-    <style name="Theme.GymParaVagos" parent="Theme.MaterialComponents.DayNight">
+    <style name="Theme.GymParaVagos" parent="Theme.Material3.Dark">
+
         <item name="elevationOverlayEnabled">true</item>
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>
-        <item name="windowActionBar">false</item>
+
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/black</item>
         <!-- Customize your theme here. -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+
+
     </style>
     <style name="Theme.Material3.Dark.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="Theme.Material3.Dark.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-    <style name="Theme.Material3.Dark.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+  
 
 </resources>

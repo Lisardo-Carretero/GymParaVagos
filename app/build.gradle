@@ -6,6 +6,20 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            keyPassword '123123'
+            storeFile file('C:\\Users\\LisardoCarretero\\.keystore')
+            storePassword '123123'
+            keyAlias 'key0'
+        }
+        release {
+            storeFile file('C:\\Users\\LisardoCarretero\\.keystore')
+            storePassword '123123'
+            keyPassword '123123'
+            keyAlias 'key1'
+        }
+    }
     compileSdk 32
 
     defaultConfig {
@@ -16,6 +30,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testFunctionalTest true
+        testHandleProfiling true
     }
 
     buildTypes {
@@ -34,12 +50,14 @@ android {
     buildFeatures {
         viewBinding true
     }
+    buildToolsVersion '33.0.0'
 }
 
 dependencies {
+    implementation 'com.firebaseui:firebase-ui-auth:8.0.2'
     implementation 'com.google.android.gms:play-services-auth:20.3.0'
     implementation platform('com.google.firebase:firebase-bom:31.0.2')
-    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation "com.google.firebase:firebase-auth-ktx:$firebaseAuthKtxVersion"
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'

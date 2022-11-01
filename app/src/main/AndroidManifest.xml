@@ -11,23 +11,22 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.Material3.Dark"
+            android:theme="@style/Theme.GymParaVagos"
             tools:targetApi="31">
 
         <activity
                 android:name=".ElegirTablaActivity"
                 android:exported="false"
-                android:label="@string/title_activity_crear_tabla"
                 android:theme="@style/Theme.Material3.Dark"/>
         <activity
                 android:name=".UserPage"
                 android:exported="false"/>
         <activity
                 android:name=".LoginPage"
-                android:exported="true">
+                android:exported="true"
+        >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
