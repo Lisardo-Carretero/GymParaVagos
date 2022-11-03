@@ -4,8 +4,8 @@ package com.example.gymparavagos
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -14,7 +14,6 @@ enum class ProviderType {
     EMAIL, GOOGLE
 }
 
-@Suppress("NAME_SHADOWING")
 class UserPage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,17 +25,13 @@ class UserPage : AppCompatActivity() {
         this.actionBar?.title = intent.extras?.get("email").toString()
         prefs.putString("email", intent.extras?.getString("email"))
         prefs.apply()
-        findViewById<Button>(R.id.button2).setOnClickListener {
 
-            FirebaseAuth.getInstance().signOut()
-            val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
-            prefs.clear()
-            prefs.apply()
-            startActivity(Intent(this, LoginPage::class.java))
-            finish()
-        }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.profile_tollbar,menu)
+        return true
+    }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.bt_logout -> {  //Desvinculamos la cuenta
